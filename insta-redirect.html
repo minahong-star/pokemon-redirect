@@ -31,10 +31,13 @@
     const USERNAME = "pokemongoappko";
 
     const webURL = `https://www.instagram.com/stories/highlights/${HIGHLIGHT_ID}/`;
-    const appURL = `instagram://story-highlight?id=${HIGHLIGHT_ID}`;
 
     const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
     const isAndroid = /Android/i.test(navigator.userAgent);
+
+    const appURL = isAndroid
+      ? `intent://user?username=${USERNAME}#Intent;scheme=instagram;package=com.instagram.android;end`
+      : `instagram://user?username=${USERNAME}`;
 
     const fallbackLink = document.getElementById("fallback-link");
     fallbackLink.href = webURL;
