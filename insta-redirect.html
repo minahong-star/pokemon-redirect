@@ -22,15 +22,14 @@
 </head>
 <body>
   <p>인스타그램으로 이동 중...</p>
-  <a id="fallback-link" href="https://www.instagram.com/stories/highlights/18045887893539734/" style="display:none">
+  <a id="fallback-link" href="https://www.instagram.com/pokemongoappko/" style="display:none">
     앱이 안 열리면 여기를 눌러주세요
   </a>
 
   <script>
-    const HIGHLIGHT_ID = "18045887893539734";
     const USERNAME = "pokemongoappko";
 
-    const webURL = `https://www.instagram.com/stories/highlights/${HIGHLIGHT_ID}/`;
+    const webURL = `https://www.instagram.com/${USERNAME}/`;
 
     const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
     const isAndroid = /Android/i.test(navigator.userAgent);
